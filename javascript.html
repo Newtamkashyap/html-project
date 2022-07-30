@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>My Javascript</title>
+    <script>
+        function showTable(){
+            let num = document.getElementById('tableNumber').value;
+            console.log(num)
+            for(i=1; i<21; i++){
+                //print into the console NOT In HTML PAGE
+                console.log(num*i);
+            }
+        }
+        // function sayHi(string message){
+        // }
+        //wap to check user is eligible for vote or not if persone is belwo 18 yrs  NO
+        function showMessage(message){
+            let age = document.getElementById('tableNumber').value;
+            if(age >= 18){
+            alert('you are eligible Voter');
+            }
+            else {
+                alert('Not a eligible voter');
+            }
+                  
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text"  id="tableNumber">
+    <button onclick="showMessage('Hello')">Check voter</button>
+    <hr>
+    <button onClick="showTable()">showTable</button>
+
+
+</body>
+</html>

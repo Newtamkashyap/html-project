@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+            .green{
+               background-color: green;
+              
+            }
+            .red{
+                background-color: red;
+               
+            }
+            .button{
+                width:100px;
+               height:50px;
+            }
+            .orange{
+                background-color: orange;
+            }
+        </style>
+<script>
+function sum(){
+    console.log('calling sum'); 
+
+    let num1 = Number (document.getElementById('number1').value);
+    let num2 = Number (document.getElementById('number2').value);
+    let total = num1 + num2;
+    console.log('sum of number = ' + total);
+
+
+    console.log('end of sum method');
+}
+   
+
+
+
+function subtract(){
+    console.log('calling subtract');
+    let num1 = Number (document.getElementById('number1').value);
+    let num2 = Number (document.getElementById('number2').value);
+    let sub = num1-num2;
+    console.log('subtract of number =' +sub);
+    console.log('end of sub method');
+
+}
+
+
+
+
+</script>
+    </head>
+    <body>
+      <label>Enter number 1</label>  
+      <input type="text"  id="number1">
+      <br>
+      <label>Enter number 2</label> 
+      <input type="text"  id="number2">
+      <br>
+        <button class="green button" onClick="sum()">add</button>
+        <button class="red button" onClick="subtract()">sub</button>
+        <button class="orange button" onClick="subtract()">sub</button>
+
+    </body>
+</html>
