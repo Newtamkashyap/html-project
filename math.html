@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>calculator </title>
+        <script>
+            
+function commonMath(name){
+
+    console.log('calling commonMath clicked button' + name);
+    let x= Number (document.getElementById("num1").value);
+    let y=Number (document.getElementById('num2').value);
+    let total=0;
+    
+     if(name==='sum'){
+         total=x+y;
+
+    }
+    if(name==='sub'){
+         total=x-y;
+
+    }
+    if(name==='multi'){
+         total=x*y;
+
+    }
+    if(name==='div'){
+         total=x/y;
+
+    }
+
+    console.log(name+' of two number = '+ total);
+}
+        </script>
+<style>
+
+
+.button-size{
+    width:100px;
+    height:50px;
+}
+.button-color{
+    background-color: blueviolet;
+}
+</style>
+
+    </head>
+    <body>
+        <h4>input box</h4>
+        <label> Enter the number1</label>
+       <input type="text" id="num1">
+       <label> Enter the number2</label>
+     <input type="text" id="num2">
+    <br>
+
+<button  class="button-size button-color " onClick ="commonMath('sum');">+</button>
+<button  class="button-size button-color" onClick =" commonMath('sub');">-</button>
+<button  class="button-size button-color" onClick =" commonMath('multi');">*</button>
+<button  class="button-size button-color" onClick =" commonMath('div');">/</button>
+
+    </body>
+</html>

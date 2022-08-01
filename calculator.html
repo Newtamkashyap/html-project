@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+            .green{
+               background-color: green;
+              
+            }
+            .red{
+                background-color: red;
+               
+            }
+            .button{
+                width:100px;
+               height:50px;
+            }
+            .orange{
+                background-color: orange;
+            }
+            .yellow{
+                background-color: yellow;
+            }
+            .pink{
+                background-color: pink;
+            }
+            .blue{
+                background-color:blue;
+            }
+
+        </style>
+<script>
+    function printSomething(methodName, total) {
+       console.log('methodName = '+ methodName);
+       console.log('total = '+ total);
+       //set value to Html page
+       document.getElementById("printValue").innerHTML = methodName+" of two num = " + total;
+       
+    }
+function common(name){
+    console.log('calling common() by method '+ name);
+
+    let num1 = Number (document.getElementById('number1').value);
+    let num2 = Number (document.getElementById('number2').value);
+    
+    let total = 0;
+    if (name === 'sum') {
+        total = num1 + num2;
+    }
+    else if (name === 'subtract') {
+        total = num1-num2;
+    }
+    else if(name === 'multiply') {
+        total = num1 * num2;
+    }
+    else if(name === 'divison') {
+        total = num1 / num2;
+    }
+    else if(name === 'percentage') {
+        total = ((num1/num2)*100) + "%";
+    }
+  
+    printSomething('common', total)
+    console.log('end of common() method'); 
+    // return sum;
+}
+
+</script>
+    </head>
+    <body>
+        <p  class="orange" id="printValue">Total = </p  >
+      <label>Enter number 1</label>  
+      <input type="text"  id="number1">
+      <br>
+      <label>Enter number 2</label> 
+      <input type="text"  id="number2">
+      <br>
+        <button class="green button" onClick="common('sum');">+</button>
+        <button class="red button" onClick="common('subtract');">-</button>
+        <button class="yellow button" onClick="common('multiply')">*</button>
+        <button class="pink button" onClick="common('divison')">/</button>
+        <button class="blue button" onClick="common('percentage')">%</button>
+        <button class="blue button" onClick="common('sum')">common</button>
+        <button class="blue button" onClick="printSomething('set my value to console and log',  4500)">sst me direct</button>
+
+    </body>
+</html>
