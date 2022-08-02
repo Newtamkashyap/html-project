@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <script>
+
+        var name = "Newtam";
+        function print(myName, age) {
+            name = myName;
+
+            console.log("My name is " + name + " ,& my age is " + age);
+
+        }
+
+        function printCollection(arrayData) {
+            console.log("Array size "+ arrayData.length) // 4
+
+            // console.log(JSON.stringify(arrayData, null , 2));
+            for (i = 0; i < arrayData.length; i++) {
+                // console.log("array index is on "+i);
+                // console.log("array index is on " + arrayData[i].name);
+                // console.log(arrayData[i]); // { name: "Newtam", age: 25 }
+                console.log("My name is "+arrayData[i].name + " and my age  : "+ arrayData[i].age); // Newtam
+                // console.log(arrayData[i].age); // age
+            }
+        }
+
+        // function printSomething() {
+        //     console.log("calling printSomething()" + name);
+        // }
+
+        //calling above function
+
+        // CASE 1
+        // print('Newtam', 25);
+        // print('Ashish');
+        // print('Kaju', 28);
+        // print('Anupam');
+
+        //CASE 2
+        let data1 = { name: "Newtam", age: 25 }
+        let data2 = { name: 'Kaju', age: 24 };
+        let data3 = { name: "Newtam", age: 25 }
+        let data4 = { name: 'Kaju', age: 24 };
+
+        let students = [data1, data2, data3, data4]
+        // console.log(students[0]); // { name: "Newtam", age: 25 }
+        // console.log(students[0].name); // Newtam
+        // console.log(students[0].age); // age
+        printCollection(students);
+            // printSomething();
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Javascript day 1</h1>
+</body>
+
+</html>
