@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>employee details</title>
+<style>
+    .bg-color{
+        background: yellow;
+    }
+    
+</style>
+
+    <script>
+        function employeDetails() {
+            // let idNumber="Ashish"
+            // let emailId="nky3037@gmail.com"
+
+            let name = document.getElementById("name").value;
+            let idNumber = document.getElementById("idNumber").value;
+            let emailId = document.getElementById("emailId").value;
+            let password = document.getElementById("password").value;
+            console.log(name.toUpperCase());
+            console.log(idNumber);
+            console.log(emailId);
+            console.log(password);
+            console.log("my name is "+ document.getElementById("name").value);
+        }
+
+
+    </script>
+</head>
+
+<body class="bg-color">
+
+    <h1>Register employee</h1>
+    <label>Name <input text="" id="name"> </label><br>
+    <label>id number <input text="" id="idNumber"> </label><br>
+    <label>email id <input text="" id="emailId"> </label><br>
+    <label>password<input text="" id="password"> </label><br>
+    <button onClick="employeDetails()"> submit button</button>
+
+
+</body>
+
+</html>

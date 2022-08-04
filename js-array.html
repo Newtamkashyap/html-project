@@ -12,9 +12,15 @@
 <script>
 
     function printAnyArrayData(anyArray) {  // [] [2] , ["Ashish", "Anupam"] [1000,200,300] , [{name:"Ashish"}], [ {title:"Yadva", age:"20"}, {title:"singh", age:"20"}]
-        for (i = 0; i < anyArray.length; i++) {
-            console.log(anyArray[i]);
-        }
+        // for (i = 0; i < anyArray.length; i++) {
+        //     console.log(anyArray[i]);
+        // }
+        //first elementany
+        console.log(anyArray[0]);
+
+        //last element 
+        // let lastIndex = anyArray.length - 1; 
+        console.log(anyArray[anyArray.length - 1]);
     }
 
     // printAnyArrayData([]);
@@ -95,9 +101,9 @@
             }
         }
 
-        console.log("Total  officers :"+ arrayData.length);
-        console.log("Total present officer :"+ present);
-        console.log("Total absent officer :"+ absent);
+        // console.log("Total  officers :"+ arrayData.length);
+        // console.log("Total present officer :"+ present);
+        // console.log("Total absent officer :"+ absent);
     }
 
     // findPresentOfficer(officer);
@@ -107,7 +113,7 @@
         for(i=0; i<arrayData.length; i++) {
             if(arrayData[i].isPresent === true) {
                 times ++ ;
-                if(times === 3 ){
+                if(times === 5 ){
                     console.log("times "+times);
                     console.log(arrayData[i]);
                     break;

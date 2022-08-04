@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>SUBJECTS</title>
+    <style>
+        .bg-color{
+            background: rgb(17, 209, 132);
+        }
+        .color{
+            color:black;
+            background:grey;
+            width:20%;
+            height:5%
+        }
+
+    </style>
+    <script>
+        function subjects() {
+            let math = document.getElementById("math").value;
+            let hindi = document.getElementById("hindi").value;
+            let english = document.getElementById("english").value;
+            let social = document.getElementById("social").value;
+            let science = document.getElementById("science").value;
+            let gk = document.getElementById("gk").value;
+
+console.log(math + "   "+hindi +"   " +english + "   "+social + "   "+science +"   "+ gk);
+
+
+        }
+    </script>
+
+</head>
+
+<body class="bg-color">
+    <h1>Student Subject</h1>
+    <label>Subject 1</label> <input type="text" id="math">
+    <br>
+    <label>Subject 2</label> <input type="text" id="hindi">
+    <br>
+    <label>Subject 3</label> <input type="text" id="english">
+    <br>
+    <label>Subject 4</label> <input type="text" id="social">
+    <br>
+    <label>Subject 5</label> <input type="text" id="science">
+    <br>
+    <label>Subject 6</label> <input type="text" id="gk">
+    <br> 
+    <button class="color" onClick="subjects()"> submit</button>
+
+
+</body>
+
+</html>

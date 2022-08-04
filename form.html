@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+function printxyz(){
+    // alert("hi");
+    let name = document.getElementById("name").value;
+    let roll = document.getElementById("roll").value;
+    let school = document.getElementById("school").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let class1 = document.getElementById("class1").value;
+
+    console.log(name);
+    console.log(roll);
+    console.log(phone);
+    console.log(school);
+    console.log(class1);
+    console.log(address);
+   
+}
+
+        </script>
+    </head>
+    <body>
+        
+        <h1>My first Html form</h1>
+
+<p> TO collect student registration data Name, roll, phone no , school class ,address</p>
+<label  onClick="name()">Name</label><input type="text" id="name"><br>
+<label>Roll</label><input type="text" id="roll"> <br>
+<label>Phone No</label><input type="text" id="phone"><br>
+<label>School</label><input type="text" id="school"><br>
+<label>Class</label><input type="text" id="class1"><br>
+<label>Address</label><input type="text" id="address"><br>
+
+<button onClick="printxyz()">Submit</button>
+
+
+    </body>
+</html>
