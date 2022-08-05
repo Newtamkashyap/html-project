@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <script>
+
+        // 0 X
+        var currentValue = 0; //X
+        var clickCount = 0;
+
+        var arr = [];
+        
+        function tic(x,index) {
+            console.log("print value x :" + x);
+            clickCount++;
+            document.getElementById(x).innerHTML = currentValue;
+            let key = x;
+            let value = currentValue;
+            let obj = { pos: key, check: value }
+
+            arr[index-1] = obj;
+            // arr.push(obj); 
+
+            if (currentValue == 0) {
+                currentValue = 'X';
+            } else {
+                currentValue = 0;
+            }
+
+
+            if (clickCount >= 5) {
+                checkWinner();
+            }
+            if (clickCount >= 9) {
+                alert("game Over");
+                return;
+            }
+
+        }
+
+        let hz1 = [0,1,2];
+        let hz2 = [3,4,5];
+        let hz3 = [6,7,8];
+
+        let vt1 = [0,3,6];
+        let vt2 = [1,4,7];
+        let vt3 = [2,5,8];
+
+        let d1= [0,4,8];
+        let d2= [2,4,6];
+
+        winnerArray = [hz1,hz2,hz3,vt1,vt2,vt3,d1,d2];
+
+        function checkWinner() {
+        winnerArray.forEach(element => {
+            checkPlayerMove(element,arr);
+        });
+      
+        }
+        function checkPlayerMove(winnerMove, currentArray) {
+            // let hz1 = [1,2,3];
+            debugger;
+            let tmp = currentArray[winnerMove[0]]?.check 
+                     + currentArray[winnerMove[1]]?.check
+                        + currentArray[winnerMove[2]]?.check;
+
+            console.log("checkPlayerMove "+tmp);
+            // for(i=0;i<winnerMove.length;i++) {
+                if(tmp == 'XXX' || tmp === 0) {
+                    alert('you are winner');
+                }
+            // }
+        }
+
+
+        // checkWinner();
+
+    </script>
+
+    <style>
+        .box {
+            display: inline-block;
+            background-color: rgb(24, 236, 123);
+            height: 100px;
+            width: 100px;
+            /* margin:5px; */
+            padding-top: 10px;
+            color: red;
+            overflow: hidden;
+            text-align: center;
+            align-items: center;
+        }
+
+        .box:hover {
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box" onClick="tic('box1',1)">
+        <span class="tic" id="box1"></span>
+    </div>
+    <div class="box" onClick="tic('box2',2)">
+        <span class="tic" id="box2"></span>
+    </div>
+    <div class="box" onClick="tic('box3',3)">
+        <span class="tic" id="box3"></span>
+    </div>
+    <br>
+    <div class="box" onClick="tic('box4',4)">
+        <span class="tic" id="box4"></span>
+    </div>
+    <div class="box" onClick="tic('box5',5)">
+        <span class="tic" id="box5"></span>
+    </div>
+    <div class="box" onClick="tic('box6',6)">
+        <span class="tic" id="box6"></span>
+    </div>
+    <br>
+    <div class="box" onClick="tic('box7',6)">
+        <span class="tic" id="box7"></span>
+    </div>
+    <div class="box" onClick="tic('box8',8)">
+        <span class="tic" id="box8"></span>
+    </div>
+    <div class="box" onClick="tic('box9',9)">
+        <span class="tic" id="box9"></span>
+
+    </div>
+
+    <button onClick="location.reload()">Reset game</button>
+    <button onClick="checkWinner()">Check Winner</button>
+
+
+
+
+</body>
+
+</html>

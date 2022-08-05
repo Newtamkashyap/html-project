@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>PatientREGISTRATIONform</title>
+
+    <style>
+        .body{
+            background: rgb(210, 207, 207);
+        }
+        .form{
+           text-align: center; 
+        }
+        .button-bg{
+            background: green;
+        }
+    </style>
+    <script>
+        function registrationForm(){
+            let patient= document.getElementByName("firstname").value;
+            let patient1= document.getElementByName("lastname").value;
+            let patient2= document.getElementByName("phoneNumber").value;
+            let patient3= document.getElementByName("alt").value;
+            let patient4= document.getElementByName("email").value;
+            let patient5= document.getElementByName("address").value;
+            let patient6= document.getElementByName("city").value;
+            let patient7= document.getElementByName("state").value;
+            let patient8= document.getElementByName("zip").value;
+            let patient9= document.getElementByName("dateOfBirth").value;
+            let patient10= document.getElementByName("age").value;
+            let patient11= document.getElementByName("marialStatus").checked;
+            let patient12= document.getElementByName("male").checked;
+            let patient13= document.getElementByName("female").checked;
+            let patient14= document.getElementByName("others").checked;
+            let patient15= document.getElementByName("ssc").value;
+            let patient16= document.getElementByName("disese").value;
+            let patient17= document.getElementByName("employer").value;
+            let patient18= document.getElementByName("contact").value;
+            let patient19= document.getElementByName("relationTP").value;
+            let patient20= document.getElementByName("altAddress").value;
+            let patient21= document.getElementByName("phoneNumber").value;
+            let patient22= document.getElementByName("subscriber").value;
+            let patient23= document.getElementByName("socialSecurityNumber").value;
+            let patient24= document.getElementByName("dob").value;
+            let patient25= document.getElementByName("hisOrHeremployer").value;
+            let patient26= document.getElementByName("workphonenumber").value;
+            let patient27= document.getElementByName("name").value;
+            let patient28= document.getElementByName("relatonshiptoPatient").value;
+            let patient29= document.getElementByName("patient'sOrGuardiantSignature").value;
+            let patient30= document.getElementByName("date").value;
+            debugger;
+            console.log(patient)
+            console.log(patient1,patient2,patient3,patient4,patient5,patient6,patient7,patient8,patient9,patient10,patient11,patient12,patient13,patient14,patient15,patient16,patient17,patient18,patient19,patient20,patient21,patient22,patient23,patient24,patient25,patient26,patient27,patient28,patient29,patient30) 
+        };
+    </script>
+
+    
+</head>
+
+<body>
+    <form method="get">
+    <div class="body">
+        <h1 class="form">PATIENT REGISTRATION FORM</h1>
+        <label>Patient's first Name::</label><input type="text" name="firstName">
+        <label>Patient's last Name::</label><input type="text" name="lastname">
+        <label>Patient's Phone Number::</label><input type="text" name="phoneNumber">
+        <label>Patient's Alternative Phone Number::</label><input type="text" name="alt">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <label>Emailname::</label><input type="text" name="email">
+        <label>Address::</label><input type="text" name="address">
+        <label>city::</label><input type="text" name="city">
+        <label> state::</label><input type="text" name="state">
+        <label>zip:</label><input type="text" name="zip">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <label>Date of birth::</label><input type="date" name="dateOfBirth">
+        <label>Age::</label><input type="text" name="age">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <label>Marial Status:</label><input type="checkbox" name="marialStatus">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <label>Gender:: male<input type="radio" name="gender" name="male"> 
+         <label>  female</label> <input type="radio" name="gender" name="female"> 
+         <label>  others</label><input type="radio" name="gender" name="others">
+        <br>
+        <label>Social Security number::</label><input type="text" name="ssc">
+        <label>patient's disese::</label><input type="text" name="disese">
+        <label> patient,s Employer:</label><input type="text" name="employer">
+        <label>Emergency contact::</label><input type="text" name="contact">
+        <br>
+        <label>Relationship to patient::</label><input type="text" name="relationTP">
+        <label>Address::</label><input type="text" name="altAddress">
+        <label>Phone Number::</label><input type="text" name="phoneNumber">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <h4>INSUSERD INFORMATION (IF OTHER THAN PATIENT).we will request to scan your name and insurance card</h4>
+        <label> subscriber/police Holder:</label><input type="text" name="subscriber">
+        <label>Social Security Number:</label><input type="text" name="socialSecurityNumber">
+        <label>DOB:</label><input type="text" name="dob">
+        <label>His or Her Employer::</label><input type="text" name="hisOrHeremployer">
+        <label>Work phone number::</label><input type="text" name="workphonenumber">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <h4>Released of information::</h4>
+        <p><input type="checkbox">I here give the permission to the present listed below to recive information about the care of above named
+            patient</p>
+        <label>Name::</label><input type="text" name="name">
+
+        <label>Relatonship to Patient::</label><input type="text" name="relatonshiptoPatient">
+        <hr>
+    </div>
+    <br>
+    <div class="body">
+        <p>Inova Medical Group reserves the right to charge a fee for any schedule visits tht are:</p>
+        <p>1.Cancelled with less than 24hrs notice</p>
+        <p>2. Are missed without calling to cancel(no show)</p>
+        <p>Cancellation Fee schedule: New Patient</p>
+
+        <label>Patient/patient's or Guardiant signature::</label><input type="text" name="patient'sOrGuardiantSignature">
+        <label>Date::</label><input type="text" name="date">
+       
+    </div>
+
+    <div>
+        
+    <input type="submit" class="button-bg form">SUBMIT</button>
+</form>
+</div>
+</body>
+
+
+</html>
