@@ -1,0 +1,17 @@
+.red{
+    color:black;
+}
+.box{
+    background-color: green;
+    margin: 5px;
+    width: 100px;
+}
+@media (max-width:400px) {
+    h1{
+        font-size: 1rem;
+    }
+    .box{
+        width: 100%;
+    }
+}
+.bg-pink{}
